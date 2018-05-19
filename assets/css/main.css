@@ -1,0 +1,135 @@
+
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    font-size: 10px;
+    margin: 0;
+}
+
+#wrapper {
+    width: 100%;
+}
+
+#header {
+    height: auto;
+    margin-bottom: 3rem;
+}
+
+#footer {
+    display: flex;
+    height: 40px;
+    justify-content: center;
+    align-items: center;
+    background-color: #c0c0c0;
+    color: #808080;
+    font-size: 1rem;
+}
+
+#content {
+    padding: 1rem;
+}
+
+.header_top , .header_bottom {
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header_top {
+    font-size: 3rem;
+    height: 80px;
+    margin-bottom: 25px;
+}
+
+.header_bottom {
+    font-size: 1.5rem;
+    padding: 1.5rem;
+}
+
+.questionName {
+    width: 100%;
+    height: 3rem;
+    display: flex;
+    margin: 0;
+    padding-left: 1rem;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: #cfcfcf;
+}
+
+.answers {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.answerFrame {
+    display: inline-flex;
+    min-width: 50%;
+    height: 60px;
+    align-items: center;
+}
+
+.answer {
+    min-width: 40vw;
+    height: 40px;
+    justify-content: flex-start;
+    align-items: center;
+    border: 1px solid #fff;
+    transition-property: all;
+    transition-delay: 0s;
+    transition-duration: 0.3s;
+}
+
+.answer.selected {
+    border: 1px solid #53aaf3;
+    border-radius: 0.5rem;
+    background-color: #9bcef9
+}
+
+.answer input {
+    visibility: hidden;
+}
+
+.answer p {
+    display: inline-flex;
+}
+
+.answer i {
+    width: 30px;
+}
+
+#submit {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#submit>a {
+    width: 80px;
+    height: 40px;
+    border-radius: 0.5rem;
+    display: flex;
+    background-color: #53aaf3;
+    color: #fff;
+    justify-content: center;
+    align-items: center;
+}
+
+#progress {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 10px;
+}
+
+#progress>div {
+    height: 100%;
+    background-color: #53aaf3;
+}
