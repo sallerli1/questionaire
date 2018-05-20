@@ -10,7 +10,20 @@ export default new Component({
     },
     methods: {
         submit() {
-            console.log(data)
+            if (data.percent>=100) {
+                post('http://www.bing.com', data.answers).then((res) => {
+                    if (res.success) {
+                        alert('提交成功')
+                    } else {
+                        alert(res.error.code)
+                    }
+                }).catch(() => {
+                    alert('未知网路错误')
+                })
+            } else {
+                alert('请填写全部问卷')
+            }
+            
         }
     }
 })
