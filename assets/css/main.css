@@ -49,6 +49,27 @@ html, body {
     padding: 1.5rem;
 }
 
+.tutorNameInput {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.tutorNameInput>label {
+    display: inline-flex;
+    align-items: center;
+    margin-right: 30px;
+    font-size: 2rem;
+}
+
+.tutorNameInput>input {
+    height: 30px;
+    border: 1px solid #808080;
+    border-radius: 0.4rem;
+}
+
 .questionName {
     width: 100%;
     height: 3rem;

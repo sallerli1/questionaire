@@ -1,18 +1,22 @@
 import Component from '../main.js'
-import {data} from './answers'
-import {get, post} from '../request'
+import data from '../data/data.js'
+import {get, post} from '../request.js'
 
 export default new Component({
     selector: '#submit',
     template: `<a bind-touchstart='submit'>{{text}}</a>`,
     data: {
         text: "提交",
-        url: 'http://yiban.xaut.edu.cn/weixin/admin/web/common/question2'
+        url: 'http://yiban.xaut.edu.cn/weixin/question/submit.php'
     },
     methods: {
         submit() {
             if (data.percent>=100) {
-                post(this.data.url, data.answers).then((res) => {
+
+                let reqData = data.answers
+                reqData.tutorName = data.tutorName
+
+                post(this.data.url, reqData).then((res) => {
                     if (res.success) {
                         alert('提交成功')
                     } else {
@@ -23,7 +27,7 @@ export default new Component({
                 })
             } else {
                 alert('请填写全部问卷')
-            }         
+            }
         }
     }
 })

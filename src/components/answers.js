@@ -1,9 +1,5 @@
 import Component from '../main.js'
-
-const exportData = {
-    answers: {},
-    percent: 0
-}
+import exportData from '../data/data.js'
 
 const singles = [{
     selector: '.question._1',
@@ -124,7 +120,7 @@ for (const question of singles) {
             }
 
             exportData.answers[this.data.index] = data.value
-            exportData.percent = calcProgress()
+
             data.checked = true
             if (data.checked) {
                 data.selected = 'selected'
@@ -133,9 +129,11 @@ for (const question of singles) {
                 data.selected = ''
                 data.icon = 'iconfont icon-radio02'
             }
+
+            exportData.percent = calcProgress()
         }
     }
-    
+
     singleComs.push(new Component(question))
 }
 
@@ -166,27 +164,35 @@ for (const question of multiples) {
             event.stopImmediatePropagation()
 
             if (!exportData.answers[this.data.index]) {
-                exportData.answers[this.data.index] = []
+                exportData.answers[this.data.index] = ''
             }
 
-            exportData.percent = calcProgress()
             data.checked = !data.checked
 
             if (data.checked) {
-                exportData.answers[this.data.index].push(data.value)
+                exportData.answers[this.data.index] += data.value
                 data.selected = 'selected'
                 data.icon = 'iconfont icon-checkbox'
             } else {
-                exportData.answers[this.data.index] = exportData.answers[this.data.index].filter((value) => {
-                    return value !== data.value
-                })
-                
+                exportData.answers[this.data.index] = exportData.answers[this.data.index]
+                    .split('')
+                    .filter((value) => {
+                        return value !== data.value
+                    })
+                    .join('')
+
+                if (exportData.answers[this.data.index] === '') {
+                    delete exportData.answers[this.data.index]
+                }
+
                 data.selected = ''
                 data.icon = 'iconfont icon-checkboxblank'
             }
+
+            exportData.percent = calcProgress()
         }
     }
-    
+
     multipleComs.push(new Component(question))
 }
 
@@ -196,4 +202,3 @@ function calcProgress() {
 
 export const singleQuestions = singleComs
 export const multiplesQuestions = multipleComs
-export const data = exportData

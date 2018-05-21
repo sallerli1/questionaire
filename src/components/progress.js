@@ -1,5 +1,5 @@
 import Component from '../main.js'
-import {data} from './answers.js'
+import data from '../data/data.js'
 
 let progress = new Component({
     selector: '#progress',
