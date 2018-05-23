@@ -1,5 +1,2 @@
-import header from './components/header.js'
-import tutorInput from './components/tutor-input.js'
-import {multiplesQuestions, singleQuestions, data} from './components/answers.js'
-import submit from './components/submit.js'
-import progress from './components/progress.js'
+import header from './components/header'
+import content from './components/content'

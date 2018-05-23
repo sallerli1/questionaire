@@ -1,7 +1,11 @@
 const data = {
     answers: {},
     percent: 0,
-    tutorName: ''
+    info: {
+       tutorName: '',
+       academyName: '',
+       className: ''
+    }
 }
 
 export default data

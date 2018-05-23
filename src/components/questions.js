@@ -1,4 +1,4 @@
-import Component from '../main.js'
+
 import exportData from '../data/data.js'
 
 const singles = [{
@@ -133,8 +133,6 @@ for (const question of singles) {
             exportData.percent = calcProgress()
         }
     }
-
-    singleComs.push(new Component(question))
 }
 
 for (const question of multiples) {
@@ -192,13 +190,11 @@ for (const question of multiples) {
             exportData.percent = calcProgress()
         }
     }
-
-    multipleComs.push(new Component(question))
 }
 
 function calcProgress() {
     return (Object.keys(exportData.answers).length / (singles.length + multiples.length)) * 100
 }
 
-export const singleQuestions = singleComs
-export const multiplesQuestions = multipleComs
+export const singleQuestions = singles
+export const multiplesQuestions = multiples

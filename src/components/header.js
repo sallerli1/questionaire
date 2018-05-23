@@ -1,6 +1,6 @@
 import Component from '../main.js'
 
-export default new Component({
+export default Component({
     selector: '#header',
     template: `<h1  class="header_top">
     <span>{{title}}</span>

@@ -1,7 +1,7 @@
 import Component from '../main.js'
 import exportData from '../data/data.js'
 
-export default new Component({
+export default {
     selector: '.tutorNameInput',
     data: {
         label: '导师姓名:'
@@ -10,7 +10,7 @@ export default new Component({
     <input bind-input='onInput' name="tutorName" id="tutorName" type="text" />`,
     methods: {
         onInput(event, data) {
-            exportData.tutorName = event.target.value
+            exportData.info.tutorName = event.target.value
         }
     }
-})
+}

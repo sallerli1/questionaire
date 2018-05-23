@@ -1,0 +1,61 @@
+获取学院列表：
+
+URL： 
+METHOD： GET
+request-CONTENT-TYPE: application/xxx-form-urlencoded
+Request-data: none
+response-CONTENT-TYPE: json
+response-data: {
+    success: true | false,
+    error: {
+        code: ,
+        msg: 
+    },
+    data: ['',
+    ...]
+}
+
+
+获取班级列表：
+
+URL： 
+METHOD： GET
+request-CONTENT-TYPE: application/xxx-form-urlencoded
+Request-data: {
+    academyId: ''
+}
+response-CONTENT-TYPE: json
+response-data: {
+    success: true | false,
+    error: {
+        code: ,
+        msg: 
+    },
+    data: data: ['',
+    ...]
+}
+
+提交问卷信息：
+
+URL：
+METHOD： GET
+request-CONTENT-TYPE: application/xxx-form-urlencoded
+Request-data: {
+    info: {
+        academyId: ,
+        classId: 
+    },
+    answers: {
+        1: '',
+        2: '',
+        ...
+    }
+}
+response-CONTENT-TYPE: json
+response-data: {
+    success: true | false,
+    error: {
+        code: ,
+        msg: 
+    }
+}

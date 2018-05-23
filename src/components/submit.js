@@ -1,8 +1,8 @@
-import Component from '../main.js'
+
 import data from '../data/data.js'
 import {get, post} from '../request.js'
 
-export default new Component({
+export default {
     selector: '#submit',
     template: `<a bind-touchstart='submit'>{{text}}</a>`,
     data: {
@@ -30,5 +30,5 @@ export default new Component({
             }
         }
     }
-})
+}
 
