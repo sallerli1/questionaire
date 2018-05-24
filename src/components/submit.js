@@ -11,7 +11,6 @@ export default {
     },
     methods: {
         submit() {
-            console.log(data)
             if (data.percent>=100 && data.info.tutorName) {
 
                 let reqData = data.answers
