@@ -1,7 +1,7 @@
 import Component from '../main.js'
 import academyClassInput from './academy-class-input.js'
 import tutorInput from './tutor-input.js'
-import { singleQuestions, multiplesQuestions } from './questions.js'
+import { singleQuestions, multipleQuestions, textQuestions } from './questions.js'
 import submit from './submit.js'
 import progress from './progress'
 
@@ -25,9 +25,14 @@ export default Component({
         Component(question)
     })
 
-    multiplesQuestions.forEach((question) => {
+    multipleQuestions.forEach((question) => {
         Component(question)
     })
+
+    textQuestions.forEach((question) => {
+        Component(question)
+    })
+    
 }).then(() => {
     Component(progress)
 }).then(() => {

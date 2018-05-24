@@ -11,7 +11,8 @@ export default {
     },
     methods: {
         submit() {
-            if (data.percent>=100) {
+            console.log(data)
+            if (data.percent>=100 && data.info.tutorName) {
 
                 let reqData = data.answers
                 reqData.tutorName = data.tutorName
@@ -25,8 +26,10 @@ export default {
                 }).catch(() => {
                     alert('未知网路错误')
                 })
+            } else if (!data.info.tutorName) {
+                alert('请填写导师姓名')
             } else {
-                alert('请填写全部问卷')
+                alert('请完成问卷')
             }
         }
     }

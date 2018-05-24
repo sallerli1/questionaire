@@ -5,85 +5,264 @@ const singles = [{
     selector: '.question._1',
     data: {
         index: 1,
-        title: '您的性别',
+        title: '1：请问你对班级导师的工作是否满意',
         answers: [{
-            icon: 'iconfont icon-radio02',
-            name: 'gender',
+            name: '1',
             value: 'A',
-            text: '男',
-            checked: false
+            text: '很满意',
         }, {
-            icon: 'iconfont icon-radio02',
-            name: 'gender',
             value: 'B',
-            text: '女',
-            checked: false
+            text: '满意',
+        }, {
+            value: 'C',
+            text: '一般'
+        }, {
+            value: 'D',
+            text: '不满意'
         }]
     }
 }, {
     selector: '.question._2',
     data: {
         index: 2,
-        title: '您的性别',
+        title: '2：你是否清楚你导师的联系方式和办公室地址',
         answers: [{
-            icon: 'iconfont icon-radio02',
-            name: 'another-gender',
+            name: '2',
             value: 'A',
-            text: '男',
-            checked: false
+            text: '十分清楚',
         }, {
-            icon: 'iconfont icon-radio02',
-            name: 'another-gender',
             value: 'B',
-            text: '女',
-            checked: false
+            text: '大概清楚',
+        },{
+            value: 'C',
+            text: '不太清楚'
+        }, {
+            value: 'D',
+            text: '完全不知道'
         }]
     }
-}]
-
-const multiples = [{
+}, {
     selector: '.question._3',
     data: {
         index: 3,
-        title: '喜欢的水果',
+        title: '3：本学年你的班级导师共召开班会情况',
         answers: [{
-            icon: 'iconfont icon-checkboxblank',
-            name: 'fruit',
+            name: '3',
             value: 'A',
-            text: '苹果',
-            checked: false
+            text: '每周或每月定期召开',
         }, {
-            icon: 'iconfont icon-checkboxblank',
-            name: 'fruit',
             value: 'B',
-            text: '李子',
-            checked: false
-        }, {
-            icon: 'iconfont icon-checkboxblank',
-            name: 'fruit',
+            text: '2次以上',
+        },{
             value: 'C',
-            text: '梨',
-            checked: false
+            text: '1-2次'
         }, {
-            icon: 'iconfont icon-checkboxblank',
-            name: 'fruit',
             value: 'D',
-            text: '石榴',
-            checked: false
+            text: '从没开过'
+        }]
+    }
+}, {
+    selector: '.question._4',
+    data: {
+        index: 4,
+        title: '4：本学年你的导师深入学生宿舍情况',
+        answers: [{
+            name: '4',
+            value: 'A',
+            text: '每周来1次宿舍',
         }, {
-            icon: 'iconfont icon-checkboxblank',
-            name: 'fruit',
-            value: 'E',
-            text: '西瓜',
-            checked: false
+            value: 'B',
+            text: '每月来1-2次宿舍',
+        },{
+            value: 'C',
+            text: '每学期来1-2次宿舍'
+        }, {
+            value: 'D',
+            text: '没来过宿舍'
+        }]
+    }
+}, {
+    selector: '.question._5',
+    data: {
+        index: 5,
+        title: '5：你是否满意导师和你见面、交流的情况',
+        answers: [{
+            name: '5',
+            value: 'A',
+            text: '满意，导师十分负责',
+        }, {
+            value: 'B',
+            text: '一般，希望加强联系',
+        },{
+            value: 'C',
+            text: '不满意，希望减弱联系'
+        }, {
+            value: 'D',
+            text: '没感觉'
+        }]
+    }
+}, {
+    selector: '.question._6',
+    data: {
+        index: 6,
+        title: '6：你的导师在学业方面对你有何指导和帮助',
+        answers: [{
+            name: '6',
+            value: 'A',
+            text: '提供学业指导、答疑和专业介绍、兴趣培养，对个人帮助很大',
+        }, {
+            value: 'B',
+            text: '提供专业介绍和学业咨询，对个人有一定帮助',
+        },{
+            value: 'C',
+            text: '偶尔有帮助'
+        }, {
+            value: 'D',
+            text: '基本无帮助'
+        }]
+    }
+}, {
+    selector: '.question._7',
+    data: {
+        index: 7,
+        title: '7：你的导师在生活方面对你有何指导与帮助',
+        answers: [{
+            name: '7',
+            value: 'A',
+            text: '关心个人生活并帮助解决生活上的难题，帮助很大',
+        }, {
+            value: 'B',
+            text: '关心个人生活，嘘寒问暖，对个人有一定帮助',
+        },{
+            value: 'C',
+            text: '偶尔有帮助'
+        }, {
+            value: 'D',
+            text: '基本无帮助'
+        }]
+    }
+}, {
+    selector: '.question._8',
+    data: {
+        index: 8,
+        title: '8：你的导师在心理方面对你有何指导和帮助',
+        answers: [{
+            name: '8',
+            value: 'A',
+            text: '师生之间经常谈心交流，主动提供指导，对个人帮助很大',
+        }, {
+            value: 'B',
+            text: '可以提供心理方面的指导，对个人有一定帮助',
+        },{
+            value: 'C',
+            text: '偶尔有帮助'
+        }, {
+            value: 'D',
+            text: '基本无帮助'
+        }]
+    }
+}, {
+    selector: '.question._9',
+    data: {
+        index: 9,
+        title: '9: 导师对你的态度如何',
+        answers: [{
+            name: '9',
+            value: 'A',
+            text: '十分热情，循循善诱',
+        }, {
+            value: 'B',
+            text: '比较热心，工作称职',
+        },{
+            value: 'C',
+            text: '态度一般，偶尔过问'
+        }, {
+            value: 'D',
+            text: '态度冷淡,不闻不问'
+        }]
+    }
+}, {
+    selector: '.question._10',
+    data: {
+        index: 10,
+        title: '10：导师与你的沟通方式是什么',
+        answers: [{
+            name: '10',
+            value: 'A',
+            text: '双方都很主动，有良好交流',
+        }, {
+            value: 'B',
+            text: '老师主动联系学生，提供指导并进行交流，但学生自己不主动',
+        },{
+            value: 'C',
+            text: '学生主动找老师，能提供帮助，但不主动联系学生'
+        }, {
+            value: 'D',
+            text: '双方均不主动，师生没有交流'
+        }]
+    }
+}, {
+    selector: '.question._11',
+    data: {
+        index: 11,
+        title: '11：您觉得目前导师制有以下哪些弊端',
+        answers: [{
+            name: '11',
+            value: 'A',
+            text: '浮于表面，走形式',
+        }, {
+            value: 'B',
+            text: '导师与学生联系太少',
+        },{
+            value: 'C',
+            text: '学生不知道应该找导师获得哪些帮助'
+        }, {
+            value: 'D',
+            text: '导师没有多余精力'
         }]
     }
 }]
 
-let singleComs = [],
-    multipleComs = []
+const multiples = [/* {
+    selector: '.question._3',
+    data: {
+        index: 3,
+        title: '3：本学年你的班级导师共召开班会情况',
+        answers: [{
+            name: 'tutor-office',
+            value: 'A',
+            text: '每周或每月定期召开',
+        }, {
+            value: 'B',
+            text: '2次以上',
+        },{
+            value: 'C',
+            text: '1-2次'
+        }, {
+            value: 'D',
+            text: '从没开过'
+        }]
+    }
+} */]
+
+const textQs = [{
+    selector: '.question._12',
+    data: {
+        index: 12,
+        title: "12：对导师工作有什么看法或建议？（可发表观点，或对改进导师工作提供一些具体的设想、措施等）"
+    }
+}]
 
 for (const question of singles) {
+
+    let name
+    for (const answer of question.data.answers) {
+        if (answer.name) name = answer.name
+        answer.icon = 'iconfont icon-radio02'
+        answer.name = name
+        answer.checked = false
+    }
+
     question.template = `<h2 class="questionName">
     <p>{{title}}</p>
 </h2>
@@ -136,6 +315,14 @@ for (const question of singles) {
 }
 
 for (const question of multiples) {
+
+    let name
+    for (const answer of question.data.answers) {
+        if (answer.name) name = answer.name
+        answer.icon = 'iconfont icon-checkboxblank',
+        answer.checked = false
+    }
+
     question.template = `<h2 class="questionName">
     <p>{{title}}</p>
 </h2>
@@ -192,9 +379,31 @@ for (const question of multiples) {
     }
 }
 
+for (const question of textQs) {
+
+    question.template = '<label class="questionName">{{title}}</label>\
+        <textarea bind-input="input"></textarea>'
+    question.methods = {
+        input(event, data) {
+            event.cancelBubble = true
+            event.preventDefault()
+            event.stopImmediatePropagation()
+
+            exportData.answers[this.data.index] = event.target.value
+
+            if (exportData.answers[this.data.index] === '') {
+                delete exportData.answers[this.data.index]
+            }
+
+            exportData.percent = calcProgress()
+        }
+    }
+}
+
 function calcProgress() {
-    return (Object.keys(exportData.answers).length / (singles.length + multiples.length)) * 100
+    return (Object.keys(exportData.answers).length / (singles.length + multiples.length + textQs.length)) * 100
 }
 
 export const singleQuestions = singles
-export const multiplesQuestions = multiples
+export const multipleQuestions = multiples
+export const textQuestions = textQs

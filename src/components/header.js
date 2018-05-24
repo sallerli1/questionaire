@@ -9,8 +9,8 @@ export default Component({
     <span>{{hint}}</span>
 </article>`,
     data: {
-        title: '购物网用户满意度调查',
-        hint: '为了给您提供更好的服务，希望您能抽出几分钟时间，将您的感受和建议告诉我们，我们非常重视每位用户的宝贵意见，期待您的参与！现在我们就马上开始吧！',
+        title: '西安理工大学',
+        hint: '2017-2018学年本科生导师工作情况调查问卷',
         list: [{
             name: 'saller',
             age: '11'

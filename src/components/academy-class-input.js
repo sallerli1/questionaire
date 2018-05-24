@@ -24,15 +24,28 @@ export default {
             let value = event.target.value
             data.currentAcademy = value
             data.classList = academyList[value]
-
-            this.element.querySelector('.academy-input').options
             exportData.info.academyName = value
-            console.log(exportData.info.academyName)
+            exportData.info.className = data.classList[0]
         },
 
         handleClassChange(event, data) {
             exportData.info.className = event.target.value
-            console.log(exportData.info.className)
+        }
+    },
+
+    mounted() {
+        this.data.classList = academyList[this.data.currentAcademy]
+        exportData.info.academyName = this.data.currentAcademy
+        exportData.info.className = this.data.classList[0]
+    },
+
+    updated() {
+        let select = this.element.querySelector('.academy-input')
+
+        for (const option of select.options) {
+            if (option.value == this.data.currentAcademy) {
+                option.selected = true
+            }
         }
     }
 }

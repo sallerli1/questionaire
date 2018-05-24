@@ -6,6 +6,7 @@ export default function Component(obj) {
     component.methods = obj.methods;
     const element = document.querySelector(obj.selector);
     element.template = obj.template;
+    element.isRoot = true
     component.element = element;
 
     component.beforeMount =
@@ -15,16 +16,15 @@ export default function Component(obj) {
     component.updated =
       obj.updated instanceof Function ? obj.updated : function() {};
 
+    component.beforeMount()
     mount(component, element);
+    component.mounted()
 
     resolve(component)
   })
 }
 
 function mount(com, element) {
-  com.beforeMount.call(com);
-  render(com, element, com.data, com.methods);
-  com.mounted.call(com);
 
   for (const key of Object.keys(com.data)) {
     defineReactive(com.data, key, {
@@ -33,6 +33,8 @@ function mount(com, element) {
       methods: com.methods
     });
   }
+
+  render(com, element, com.data, com.methods);
 }
 
 function render(self, element, data, methods) {
@@ -85,7 +87,9 @@ function render(self, element, data, methods) {
     }
   }
 
-  self.updated()
+  if (element.isRoot) {
+      self.updated()
+  }
 }
 
 function renderFor(self, fors, data, methods) {
