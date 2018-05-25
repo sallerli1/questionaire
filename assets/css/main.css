@@ -129,6 +129,7 @@ p {
 }
 
 .answer {
+    display: flex;
     font-size: 1rem;
     min-width: 40vw;
     height: 40px;

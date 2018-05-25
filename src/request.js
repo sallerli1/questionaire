@@ -38,11 +38,13 @@ function jsonToUrl(param, key) {
                 var k = key == null ? i : key + (param instanceof Array ? "[" + i + "]" : "." + i);
                 paramStr += '&' + jsonToUrl(param[i], k);
             }
-        } else {
+        } else if (Object.prototype.toString.call(param) === '[object Object]') {
             for (const keyStr of Object.keys(param)) {
                 var k = key == null ? keyStr : key + (param instanceof Array ? "[" + keyStr + "]" : "." + keyStr);
                 paramStr += '&' + jsonToUrl(param[keyStr], k);
             }
+        } else {
+            paramStr += '&' + key + '=';
         }
     }
     return paramStr.substr(1);

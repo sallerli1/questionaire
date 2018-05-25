@@ -13,8 +13,9 @@ export default {
         submit() {
             if (data.percent>=100 && data.info.tutorName) {
 
-                let reqData = data.answers
-                reqData.tutorName = data.tutorName
+                let reqData = {}
+                reqData.answers = data.answers
+                reqData.info = data.info
 
                 post(this.data.url, reqData).then((res) => {
                     if (res.success) {
@@ -22,7 +23,7 @@ export default {
                     } else {
                         alert(res.error.code)
                     }
-                }).catch(() => {
+                }).catch((err) => {
                     alert('未知网路错误')
                 })
             } else if (!data.info.tutorName) {
