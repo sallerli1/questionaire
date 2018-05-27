@@ -6,12 +6,18 @@ export default {
     selector: '#submit',
     template: `<a bind-touchstart='submit'>{{text}}</a>`,
     data: {
+        submited: false,
         text: "提交",
         url: 'http://yiban.xaut.edu.cn/weixin/question/submit.php'
     },
     methods: {
         submit() {
             if (data.percent>=100 && data.info.tutorName) {
+
+                if (this.data.submited) {
+                    alert('请勿重复提交') 
+                    return
+                }
 
                 let reqData = {}
                 reqData.answers = data.answers
@@ -21,7 +27,7 @@ export default {
                     if (res.success) {
                         alert('提交成功')
                     } else {
-                        alert(res.error.code)
+                        alert(res.error.msg)
                     }
                 }).catch((err) => {
                     alert('未知网路错误')

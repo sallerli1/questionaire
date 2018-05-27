@@ -31,20 +31,20 @@ export function post(url, data) {
 function jsonToUrl(param, key) {
     var paramStr = "";
     if (typeof param === 'string' || typeof param === 'number' || typeof param === 'boolean') {
-        paramStr += "&" + key + "=" + encodeURIComponent(param);
+        paramStr += "&" + encodeURIComponent(key) + "=" + encodeURIComponent(param);
     } else {
         if (Array.isArray(param)) {
             for (let i=0; i<param.length; i++) {
-                var k = key == null ? i : key + (param instanceof Array ? "[" + i + "]" : "." + i);
+                var k = key == null ? i : key + "[" + i + "]";
                 paramStr += '&' + jsonToUrl(param[i], k);
             }
         } else if (Object.prototype.toString.call(param) === '[object Object]') {
             for (const keyStr of Object.keys(param)) {
-                var k = key == null ? keyStr : key + (param instanceof Array ? "[" + keyStr + "]" : "." + keyStr);
+                var k = key == null ? keyStr : key + "[" + keyStr + "]";
                 paramStr += '&' + jsonToUrl(param[keyStr], k);
             }
         } else {
-            paramStr += '&' + key + '=';
+            paramStr += '&' + encodeURIComponent(key) + '=';
         }
     }
     return paramStr.substr(1);
