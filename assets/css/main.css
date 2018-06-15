@@ -14,6 +14,7 @@ p {
 
 #wrapper {
     width: 100%;
+    background-color: #fff;
 }
 
 #header {
@@ -42,27 +43,48 @@ p {
     align-items: center;
 }
 
+.header_top .title {
+    margin-bottom: 1rem;
+}
+
+.header_top .sub-title {
+    font-size: 2rem;
+}
+
 .header_top {
     font-size: 3rem;
     height: 80px;
     margin-bottom: 1rem;
+    flex-direction: column;
 }
 
 .header_bottom {
-    font-size: 2rem;
+    font-size: 1.5rem;
     padding: 1.5rem;
+    white-space: pre-wrap;
+    line-height: 2rem;
+}
+
+.input-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.input-col {
+    width: 40%;
+    height: 25px;
 }
 
 #academy-class-input {
     height: 100px;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
 }
 
-#academy-class-input select {
-    width: 40%;
-    height: 25px;
+#academy-class-input select, #academy-class-input input {
+    width: 100%;
+    height: 100%;
 }
 
 .tutorNameInput {
@@ -130,7 +152,7 @@ p {
 
 .answer {
     display: flex;
-    font-size: 1rem;
+    font-size: 1.35rem;
     min-width: 40vw;
     height: 40px;
     justify-content: flex-start;
@@ -189,4 +211,9 @@ p {
 #progress>div {
     height: 100%;
     background-color: #53aaf3;
+}
+
+#clear {
+    position: absolute;
+    left: 2000px;
 }

@@ -11,7 +11,7 @@ export default Component({
         </section>\
         <section class="tutorNameInput">\
         </section>\
-        <section data-for="40" class="question _{{num}}">\
+        <section data-for="10" class="question _{{num}}">\
         </section>\
         <div id="submit">\
         </div>',

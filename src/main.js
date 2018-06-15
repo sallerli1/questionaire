@@ -17,8 +17,10 @@ export default function Component(obj) {
         component.updated =
             obj.updated instanceof Function ? obj.updated : function() {};
 
-        for (const key of Object.keys(component.methods)) {
-          component.methods[key] = component.methods[key].bind(component)
+        if (component.methods) {
+            for (const key of Object.keys(component.methods)) {
+                component.methods[key] = component.methods[key].bind(component);
+            }
         }
 
         component.beforeMount();
@@ -47,6 +49,11 @@ function render(self, element, data, methods) {
     }
 
     if (element.nodeType === Node.ELEMENT_NODE) {
+        if (element.dataset.if && !data[element.dataset.if]) {
+            element.style.display='none';
+            return
+        }
+        
         let fors = element.querySelectorAll("[data-for]");
 
         renderFor(self, fors, data, methods);

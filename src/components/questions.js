@@ -5,29 +5,9 @@ const singles = [{
     selector: '.question._1',
     data: {
         index: 1,
-        title: '1：请问你对班级导师的工作是否满意',
+        title: '1：你是否清楚你导师的联系方式和办公室地址',
         answers: [{
             name: '1',
-            value: 'A',
-            text: '很满意',
-        }, {
-            value: 'B',
-            text: '满意',
-        }, {
-            value: 'C',
-            text: '一般'
-        }, {
-            value: 'D',
-            text: '不满意'
-        }]
-    }
-}, {
-    selector: '.question._2',
-    data: {
-        index: 2,
-        title: '2：你是否清楚你导师的联系方式和办公室地址',
-        answers: [{
-            name: '2',
             value: 'A',
             text: '十分清楚',
         }, {
@@ -42,12 +22,12 @@ const singles = [{
         }]
     }
 }, {
-    selector: '.question._3',
+    selector: '.question._2',
     data: {
-        index: 3,
-        title: '3：本学年你的班级导师共召开班会情况',
+        index: 2,
+        title: '2：本学年你的班级导师共召开班会情况',
         answers: [{
-            name: '3',
+            name: '2',
             value: 'A',
             text: '每周或每月定期召开',
         }, {
@@ -62,12 +42,12 @@ const singles = [{
         }]
     }
 }, {
-    selector: '.question._4',
+    selector: '.question._3',
     data: {
-        index: 4,
-        title: '4：本学年你的导师深入学生宿舍情况',
+        index: 3,
+        title: '3：本学年你的导师深入学生宿舍情况',
         answers: [{
-            name: '4',
+            name: '3',
             value: 'A',
             text: '每周来1次宿舍',
         }, {
@@ -82,32 +62,12 @@ const singles = [{
         }]
     }
 }, {
-    selector: '.question._5',
+    selector: '.question._4',
     data: {
-        index: 5,
-        title: '5：你是否满意导师和你见面、交流的情况',
+        index: 4,
+        title: '4：你的导师在学业方面对你有何指导和帮助',
         answers: [{
-            name: '5',
-            value: 'A',
-            text: '满意，导师十分负责',
-        }, {
-            value: 'B',
-            text: '一般，希望加强联系',
-        },{
-            value: 'C',
-            text: '不满意，希望减弱联系'
-        }, {
-            value: 'D',
-            text: '没感觉'
-        }]
-    }
-}, {
-    selector: '.question._6',
-    data: {
-        index: 6,
-        title: '6：你的导师在学业方面对你有何指导和帮助',
-        answers: [{
-            name: '6',
+            name: '4',
             value: 'A',
             text: '提供学业指导、答疑和专业介绍、兴趣培养，对个人帮助很大',
         }, {
@@ -122,12 +82,12 @@ const singles = [{
         }]
     }
 }, {
-    selector: '.question._7',
+    selector: '.question._5',
     data: {
-        index: 7,
-        title: '7：你的导师在生活方面对你有何指导与帮助',
+        index: 5,
+        title: '5：你的导师在生活方面对你有何指导与帮助',
         answers: [{
-            name: '7',
+            name: '5',
             value: 'A',
             text: '关心个人生活并帮助解决生活上的难题，帮助很大',
         }, {
@@ -142,12 +102,12 @@ const singles = [{
         }]
     }
 }, {
-    selector: '.question._8',
+    selector: '.question._6',
     data: {
-        index: 8,
-        title: '8：你的导师在心理方面对你有何指导和帮助',
+        index: 6,
+        title: '6：你的导师在心理关怀方面对你有何指导和帮助',
         answers: [{
-            name: '8',
+            name: '6',
             value: 'A',
             text: '师生之间经常谈心交流，主动提供指导，对个人帮助很大',
         }, {
@@ -162,12 +122,12 @@ const singles = [{
         }]
     }
 }, {
-    selector: '.question._9',
+    selector: '.question._7',
     data: {
-        index: 9,
-        title: '9: 导师对你的态度如何',
+        index: 7,
+        title: '7: 导师对你的态度如何',
         answers: [{
-            name: '9',
+            name: '7',
             value: 'A',
             text: '十分热情，循循善诱',
         }, {
@@ -182,12 +142,12 @@ const singles = [{
         }]
     }
 }, {
-    selector: '.question._10',
+    selector: '.question._8',
     data: {
-        index: 10,
-        title: '10：导师与你的沟通方式是什么',
+        index: 8,
+        title: '8：你认为导师与你的沟通效果如何',
         answers: [{
-            name: '10',
+            name: '8',
             value: 'A',
             text: '双方都很主动，有良好交流',
         }, {
@@ -202,23 +162,23 @@ const singles = [{
         }]
     }
 }, {
-    selector: '.question._11',
+    selector: '.question._9',
     data: {
-        index: 11,
-        title: '11：您觉得目前导师制有以下哪些弊端',
+        index: 9,
+        title: '9：请问你对导师的工作是否满意',
         answers: [{
-            name: '11',
+            name: '9',
             value: 'A',
-            text: '浮于表面，走形式',
+            text: '很满意',
         }, {
             value: 'B',
-            text: '导师与学生联系太少',
+            text: '满意',
         },{
             value: 'C',
-            text: '学生不知道应该找导师获得哪些帮助'
+            text: '一般'
         }, {
             value: 'D',
-            text: '导师没有多余精力'
+            text: '不满意'
         }]
     }
 }]
@@ -246,10 +206,10 @@ const multiples = [/* {
 } */]
 
 const textQs = [{
-    selector: '.question._12',
+    selector: '.question._10',
     data: {
-        index: 12,
-        title: "12：对导师工作有什么看法或建议？（可发表观点，或对改进导师工作提供一些具体的设想、措施等）"
+        index: 10,
+        title: "10：对导师工作有什么看法或建议？（可发表观点，或对改进导师工作提供一些具体的设想、措施等）"
     }
 }]
 
@@ -310,6 +270,8 @@ for (const question of singles) {
             }
 
             exportData.percent = calcProgress()
+
+            document.activeElement.blur();
         }
     }
 }
@@ -375,6 +337,8 @@ for (const question of multiples) {
             }
 
             exportData.percent = calcProgress()
+
+            document.activeElement.blur();
         }
     }
 }

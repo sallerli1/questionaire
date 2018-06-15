@@ -32,6 +32,8 @@ export default {
                 }).catch((err) => {
                     alert('未知网路错误')
                 })
+            } else if (!data.info.className) {
+                alert('请填写班级')
             } else if (!data.info.tutorName) {
                 alert('请填写导师姓名')
             } else {
