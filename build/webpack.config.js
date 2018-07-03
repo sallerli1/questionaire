@@ -1,7 +1,9 @@
 const path = require('path');
 
 module.exports = {
-  entry: path.join(__dirname, '../src', "index.js"),
+  entry: {
+    app: ['babel-polyfill', './src/index.js']
+  },
   mode: 'development',
   output: {
     filename: 'js/bundle.js',
@@ -9,11 +11,13 @@ module.exports = {
   },
   module: {
     rules: [{
-      test: /\.css$/,
-      use: [
-        'style-loader',
-        'css-loader'
-      ]
-    }]
-  }
+        test: /\.js$/,
+        loader: 'babel-loader',
+        include: [
+          path.resolve('../src'),
+          path.resolve('../test')
+        ]}
+    ]
+  },
+  devtool: 'cheap-module-eval-source-map'
 };
